@@ -36,6 +36,9 @@
         return Vue.component("feature-masonry", {
             template: template, // the variable template will be injected,
             props:['feature_items', 'locale']
+            created(){
+                console.log("feature_items", this.feature_items)
+            }
         });
     });
 </script>
