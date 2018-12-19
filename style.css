@@ -3627,7 +3627,7 @@ iframe.station_41 {
 .contest_btn, .contact_btn {
   background: $accent;
   border: none;
-  border: 3px solid $accent;
+  border: 3px solid $primary;
   -webkit-border-radius: 0px;
   border-radius: 0px;
   padding: 5px 5%;
