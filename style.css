@@ -1782,7 +1782,7 @@ strong, .bold {
                 position:absolute;
                 top:0;
                 right:0;
-                border: none;
+                // border: none;
                 height: 100%;
                 width: 60px;
                 // font-family: cursive;
