@@ -164,7 +164,7 @@
                     var mobile_features = this.$store.state.feature_items;
                     _.forEach(mobile_features, function(value, key) {
                       
-                        if( _.includes([0,1,4,5], key) ) {
+                        if( _.includes([0,1,2,3], key) ) {
                             value.masonry_class = "grid-item--height2";
                         }
                         else if ( _.includes([2,3], key) ){
