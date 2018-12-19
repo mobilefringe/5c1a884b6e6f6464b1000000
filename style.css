@@ -1788,11 +1788,10 @@ strong, .bold {
                 margin:0;
                 padding:0;
                 border-radius:0;
-                &:hover {
-                    :after{
+                &:after{
                         background-color: $accent;
                     }
-                }
+                
                 .fa {
                     color: #fff;
                     margin-top: 14px;
