@@ -1778,6 +1778,7 @@ strong, .bold {
             a {
                 background-color: $primary;
                 color: #fff;
+                border: 1px solid $primary;
                 position:absolute;
                 top:0;
                 right:0;
