@@ -16,7 +16,7 @@
 		    <div>
 		      <h3 class="home_page_title caps">{{$t("home_page.explore")}}</h3>
 		    </div>
-            <feature-masonry class="hidden_phone" :feature_items="feature_items" :locale="locale"></feature-masonry>
+            <feature-masonry class="" :feature_items="feature_items" :locale="locale"></feature-masonry>
 		    <!--<feature-masonry class="visible_phone" :feature_items="mobile_feature_items" :locale="locale"></feature-masonry>-->
             <div>
 		      <h3 class="home_page_title caps">{{$t("home_page.our_feed")}}</h3>
@@ -141,7 +141,6 @@
                             value.masonry_class = " ";
                             value.image_url = "https://picsum.photos/570/570?image=88"+key;
                         }
-                        console.log("value.masonry_class", value.masonry_class)
                         if(value.name === null || value.name === undefined || value.name.length == 0) {
                             value.no_hover_class = false;
                         }
