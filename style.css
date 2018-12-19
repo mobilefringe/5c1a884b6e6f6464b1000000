@@ -1776,7 +1776,7 @@ strong, .bold {
                 padding-right: 70px;
             }
             a {
-                background-color: #34455F;
+                background-color: $primary;
                 color: #fff;
                 position:absolute;
                 top:0;
