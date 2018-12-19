@@ -21,7 +21,6 @@
         				</div>
                 	</div>
         		</div>
-        		{{feature.masonry_class}}
             </div>
         </div>
     </div>
