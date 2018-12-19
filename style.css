@@ -1789,8 +1789,8 @@ strong, .bold {
                 padding:0;
                 border-radius:0;
                 &:after{
-                        background-color: $accent;
-                    }
+                    background-color: $accent;
+                }
                 
                 .fa {
                     color: #fff;
