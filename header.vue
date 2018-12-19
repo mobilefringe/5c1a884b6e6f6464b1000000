@@ -3,7 +3,7 @@
     	<div class="top_bar">
     		<div class="site_container">
     			<div class="row top_bar_wrapper">
-    				<div class="col-sm-4">
+    				<div class="col-sm-6">
     					<div class="mobile_site_logo visible_phone">
     					    <router-link to="/"><img :src="property_logo" :alt="property.name"/></router-link>
     				    </div>
@@ -11,7 +11,7 @@
     						<p class="open_now"><span v-if="todays_hours.is_closed == null || !todays_hours.is_closed ">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed")}}</span> <span v-if="todays_hours.is_closed == null || !todays_hours.is_closed "><span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}} </span></p>
     					</div>
     				</div>
-    				<div class="col-sm-8 hidden_phone text-right">
+    				<div class="col-sm-6 hidden_phone text-right">
     					<div class="header_social">
     					<transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
         					<div id="search_component_wrapper" class="inline_block" v-if="showSearch">
