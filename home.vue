@@ -178,7 +178,7 @@
                         //     value.mobile_order = key + 2;
                         // }
                         // else {
-                        //     value.mobile_order = key + 1;
+                            value.mobile_order = key + 1;
                         // }
                         // if(key == 8) {
                         //     value.mobile_order = 7;
