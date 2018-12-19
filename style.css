@@ -3655,7 +3655,7 @@ iframe.station_41 {
   left: 50%;
   bottom: 0;
   height: 3px;
-  background: $accent;
+  background: #fff;
   height: 120%;
   left: -10%;
   -webkit-transform: skewX(15deg);
