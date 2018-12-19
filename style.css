@@ -919,10 +919,10 @@ strong, .bold {
     text-align: left;
     display: inline-block;
     transition: all ease 0.5s;
-  img {
-    max-width: 100%;
-    transition: all .5s ease;
-  }
+    img {
+        max-width: 100%;
+        transition: all .5s ease;
+    }
 }
 
 /* DESKTOP NAV */
