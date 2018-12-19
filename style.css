@@ -1791,7 +1791,6 @@ strong, .bold {
                 border-radius:0;
                 &:after{
                     background-color: $accent;
-                    border: 1px solid $primary;
                 }
                 
                 .fa {
