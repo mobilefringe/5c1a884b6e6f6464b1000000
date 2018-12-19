@@ -1,0 +1,72 @@
+[
+    {
+        "name": "header.stores",
+        "href": "#",
+        "open_dropdown": false,
+        "id": "stores_link",
+        "sub_menu": [{
+                "name": "header.stores",
+                "href": "/stores"
+            },
+            {
+                "name": "header.centre_map",
+                "href": "/map"
+            },
+            {
+                "name": "header.restaurants",
+                "href": "/restaurants"
+            }
+        ]
+    },
+    {
+        "name": "header.promos",
+        "href": "/promotions",
+        "id": "promos_link"
+    },
+    {
+        "name": "header.news_events",
+        "href": "/events",
+        "id": "events_link"
+    },
+    {
+        "name": "header.hours",
+        "href": "/hours",
+        "id": "hours_link"
+    },
+    {
+        "name": "header.services",
+        "href": "#",
+        "open_dropdown": false,
+        "id": "services_link",
+        "sub_menu": [{
+                "name": "header.sustainability ",
+                "href": "/pages/centerpoint-sustainability"
+            },
+            {
+                "name": "header.accessibility",
+                "href": "/pages/centerpoint-accessibility"
+            }
+            
+        ]
+    },
+    {
+        "name": "header.contact_us",
+        "href": "#",
+        "id": "contact_link",
+        "open_dropdown": false,
+        "sub_menu": [
+            {
+                "name": "header.contact_us",
+                "href": "/contact_us"
+            },
+            {
+                "name": "header.leasing",
+                "href": "/pages/eastyork-leasing"
+            },
+            {
+                "name": "header.employment",
+                "href": "/jobs"
+            }
+        ]
+    }
+]
