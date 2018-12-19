@@ -203,6 +203,11 @@
                 },
                 todays_hours() {
                     return this.getTodayHours;
+                },
+                weather() {
+                    private const string openWeatherAPIKey = “c225dc6aeb2d6a1b39e8a463cedb62bd”;
+private const string openWeatherURL = “http://api.openweathermap.org/data/2.5/weather“;
+return openWeatherURL + “?id=” + CityCode + “&APPID=” + openWeatherAPIKey + “&units=” + WeatherFormat;
                 }
             },
             methods: {
