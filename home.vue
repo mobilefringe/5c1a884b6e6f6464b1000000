@@ -129,11 +129,11 @@
                     var features = this.$store.state.feature_items;
                     _.forEach(features, function(value, key) {
                       
-                        if( _.includes([0,1,2,3], key) ) {
+                        if( _.includes([0,1,3,4], key) ) {
                             value.masonry_class = "grid-item--height2";
                             value.image_url = "https://picsum.photos/570/1140?image=98"+key;
                         }
-                        else if ( _.includes([4,5], key) ){
+                        else if ( _.includes([2,5], key) ){
                             value.masonry_class = "grid-item--width2";
                             value.image_url = "https://picsum.photos/1140/570?image=97"+key;
                         }
@@ -164,10 +164,10 @@
                     var mobile_features = this.$store.state.feature_items;
                     _.forEach(mobile_features, function(value, key) {
                       
-                        if( _.includes([0,1,2,3], key) ) {
+                        if( _.includes([0,1,3,4], key) ) {
                             value.masonry_class = "grid-item--height2";
                         }
-                        else if ( _.includes([4,5], key) ){
+                        else if ( _.includes([2,5], key) ){
                             value.masonry_class = "grid-item--width2";
                         }
                         else {
