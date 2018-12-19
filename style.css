@@ -1235,10 +1235,9 @@ strong, .bold {
         // display:none;
      }
      .site_logo{
-          max-width:90px;
-        // img{
-        //      width:90px;
-        // }
+             max-width: 160px;
+    margin: 20px auto;
+}
      }
      #primary_nav {
          padding-top: 0;
