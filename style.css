@@ -914,8 +914,8 @@ strong, .bold {
 }
 
 .site_logo {
-  margin: 20px 0;
-  max-width: 120px;
+    margin: 37px 0;
+    max-width: 230px;
   text-align: left;
   display: inline-block;
   transition: all ease 0.5s;
