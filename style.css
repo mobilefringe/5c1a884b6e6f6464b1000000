@@ -1789,7 +1789,9 @@ strong, .bold {
                 padding:0;
                 border-radius:0;
                 &:hover {
-                    background-color: $accent;
+                    :after{
+                        background-color: $accent;
+                    }
                 }
                 .fa {
                     color: #fff;
