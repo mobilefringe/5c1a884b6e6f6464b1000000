@@ -141,6 +141,7 @@
                             value.masonry_class = " ";
                             value.image_url = "https://picsum.photos/570/570?image=88"+key;
                         }
+                        console.log("value.masonry_class", value.masonry_class)
                         if(value.name === null || value.name === undefined || value.name.length == 0) {
                             value.no_hover_class = false;
                         }
