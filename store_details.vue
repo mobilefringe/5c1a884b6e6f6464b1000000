@@ -128,9 +128,9 @@
             watch: {
                 currentStore: function() {
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                           this.currentStore.store_front_url_abs.no_store_logo = true;
+                           this.currentStore.no_store_logo = true;
                         } else {
-                          this.currentStore.store_front_url_abs.no_store_logo = false;
+                          this.currentStore.no_store_logo = false;
                         }
                     var vm = this;
                     var temp_promo = [];
