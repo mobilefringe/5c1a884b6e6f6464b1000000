@@ -11,7 +11,7 @@
 		<div class="site_container">
 			<div class="row">
 				<div class="col-sm-4 promo_logo_container hidden_phone">
-					<div class="image_container">
+					<div class="image_container details_store_image">
 						<!--<img v-lazy="currentStore.store_front_url_abs" class="image"/>-->
 						<div v-if="currentStore.no_store_logo" class="store_details_image center-block">
                             <div class="no_logo">
