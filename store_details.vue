@@ -211,7 +211,7 @@
                 },
                 updatePNGMap(map) {
                     this.map = map;
-                     this.$refs.mapplic_ref.showLocation(store.svgmap_region);
+                     this.dropPin(this.currentStore);
                     // this.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate, 35);
                 },
             }
