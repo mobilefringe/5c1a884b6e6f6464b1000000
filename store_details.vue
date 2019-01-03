@@ -13,16 +13,12 @@
 				<div class="col-sm-4 promo_logo_container hidden_phone">
 					<div class="image_container">
 						<!--<img v-lazy="currentStore.store_front_url_abs" class="image"/>-->
-						<div v-if="!currentStore.no_store_logo">
-            			    <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/image/png/1545150810975/default_background.png" alt="">
-            			    <img  class="store_img" :src="currentStore.store_front_url_abs" :alt="'Click here to view info about ' + currentStore.name +  currentStore.id"/>
-            			</div>
-                        <div v-else class="no_logo_container">
-                            <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/image/png/1545150810975/default_background.png" alt="">
-                            <div class="no_logo_text">
-                                <div class="store_text"><h2>{{ currentStore.name }}</h2></div>
-                            </div>
-                        </div>
+						<div v-if="currentStore.no_logo" class="store_details_image center-block">
+                                    <div class="no_logo">
+                                        <p class="store_details_name">{{ currentStore.name }}</p>
+                                    </div>    
+                                </div>
+                                <img v-else class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
 					</div>
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
