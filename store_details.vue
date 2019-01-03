@@ -184,12 +184,41 @@
                     'findRepoByName',
                     'findHourById'
                 ]),
-                getPNGurl () {
-                    return "https://www.mallmaverick.com" + this.property.map_url;
+                // getPNGurl () {
+                //     return "https://www.mallmaverick.com" + this.property.map_url;
+                // },
+                // pngMapRef() {
+                //     return this.$refs.pngmapref;
+                // },
+                
+                mapStores() {
+                    var all_stores = this.processedStores;
+                    _.forEach(all_stores, function(value, key) {
+                        value.zoom = 2;
+                        if(value.svgmap_region == null){
+                            value.svgmap_region = value.id;
+                        }
+                    });
+                    return all_stores;
                 },
-                pngMapRef() {
-                    return this.$refs.pngmapref;
+                storeNames () {
+                    return _.map(this.processedStores, 'name');
                 },
+                getSVGMap(){
+                  return "//mallmaverick.com"+this.property.svgmap_url;  
+                },
+                floorList () {
+                    var floor_list = [];
+                    var floor_1 = {};
+                    floor_1.id = "first-floor";
+                    floor_1.title = "Level One";
+                    floor_1.map = this.getSVGMap;
+                    floor_1.z_index = null;
+                    floor_1.show = true;
+                    floor_list.push(floor_1);
+                    
+                    return floor_list;
+                }
             },
             methods: {
                 loadData: async function() {
