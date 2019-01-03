@@ -206,16 +206,12 @@
                         this.$router.replace('/');
                     }
                 },
-                addLandmark(store) {
-                    this.pngMapRef.addMarker(store);
+                dropPin(store) {
+                    this.$refs.mapplic_ref.showLocation(store.svgmap_region);
                 },
                 updatePNGMap(map) {
                     this.map = map;
-                    this.addLandmark(this.currentStore);
-                    var vm = this;
-                    setTimeout(function () {
-                        vm.pngMapRef.focusTo(vm.currentStore.x_coordinate, vm.currentStore.y_coordinate, 35);
-                    }, 500)
+                     this.$refs.mapplic_ref.showLocation(store.svgmap_region);
                     // this.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate, 35);
                 },
             }
