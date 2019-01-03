@@ -13,7 +13,7 @@
 				<div class="col-sm-4 promo_logo_container hidden_phone">
 					<div class="image_container">
 						<!--<img v-lazy="currentStore.store_front_url_abs" class="image"/>-->
-						<div v-if="currentStore.no_logo" class="store_details_image center-block">
+						<div v-if="currentStore.no_store_logo" class="store_details_image center-block">
                             <div class="no_logo">
                                 <p class="store_details_name">{{ currentStore.name }}</p>
                             </div>    
