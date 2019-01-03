@@ -107,7 +107,7 @@
                 allStores() {
                     var stores = this.processedStores;
                     stores.map(store => {
-                      if (_.includes(store.store_front_url_abs, 'missing')) {
+                        if (_.includes(store.store_front_url_abs, 'missing')) {
                            store.no_store_logo = true;
                         } else {
                           store.no_store_logo = false;
