@@ -128,10 +128,10 @@
             watch: {
                 currentStore: function() {
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                           this.currentStore.no_store_logo = true;
-                        } else {
-                          this.currentStore.no_store_logo = false;
-                        }
+                       this.currentStore.no_store_logo = true;
+                    } else {
+                      this.currentStore.no_store_logo = false;
+                    }
                     var vm = this;
                     var temp_promo = [];
                     var temp_job = [];
