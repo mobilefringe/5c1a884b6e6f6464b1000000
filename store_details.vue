@@ -14,17 +14,17 @@
 					<div class="image_container">
 						<!--<img v-lazy="currentStore.store_front_url_abs" class="image"/>-->
 						<div v-if="currentStore.no_logo" class="store_details_image center-block">
-                                    <div class="no_logo">
-                                        <p class="store_details_name">{{ currentStore.name }}</p>
-                                    </div>    
-                                </div>
-                                <img v-else class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
+                            <div class="no_logo">
+                                <p class="store_details_name">{{ currentStore.name }}</p>
+                            </div>    
+                        </div>
+                        <img v-else class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
 					</div>
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
 					<div class="col-sm-12 no_padding">
 						<!--<png-map ref="pngmapref" v-bind:png-map-url="getPNGurl" :initial-position="'1250 1250'" :height="_.toNumber('625')" @updateMap="updatePNGMap"></png-map>-->
-						<mapplic-map ref="mapplic_ref" :height="650" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="mapStores" :floorlist="floorList" tooltiplabel="View Store Details"></mapplic-map>
+						<mapplic-map ref="mapplic_ref" :height="350" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="mapStores" :floorlist="floorList" tooltiplabel="View Store Details"></mapplic-map>
 					</div>
 				</div>
 			</div>
