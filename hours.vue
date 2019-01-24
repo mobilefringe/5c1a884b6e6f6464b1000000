@@ -9,7 +9,63 @@
 			</div>
 		</div>  
         <div class="site_container">
-            <div class="all_hours_container">
+        <div class="row hours_row">
+                        <div class="col-sm-12 col-lg-3">
+                            <div class="hours_container todays_hours">
+                                <p v-if="todaysHours && !todaysHours.is_closed" class="caps center">Open Now</p>
+                                <p v-if="todaysHours && !todaysHours.is_closed" class="center">
+                                    {{todaysHours.open_time | moment("h:mm a", timezone)}} - {{todaysHours.close_time | moment("h:mm a", timezone)}}    
+                                </p>
+                                <p v-else class="center">Closed</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="hours_container">
+                                <p class="caps center">Monday - Friday</p>
+                                <p v-for="hour in weekdayHours" class="center">
+                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="hours_container">
+                                <p class="caps center">Saturday</p>
+                                <p v-for="hour in saturdayHours" class="center">
+                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="hours_container">
+                                <p class="caps center">Sunday</p>
+                                <p v-for="hour in sundayHours" class="center">
+                                    {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="holidayHours.length > 0" class="row">
+                        <div class="col-sm-12">
+                            <h4 class="margin_30 bold">Holiday Hours</h4>
+                        </div>
+                        <div v-for="hour in holidayHours" class="col-sm-6">
+                            <div class="row holiday_hours">
+                                <div class="col-md-12 col-lg-4">
+                                    <p class="bold caps">{{ hour.holiday_name }}</p>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <p>{{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}</p>    
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <span v-if="hour.is_closed == true">Closed</span>
+                                    <span v-else>
+                                        {{ hour.open_time | moment("h:mm a", timezone) }} - {{ hour.close_time | moment("h:mm a", timezone) }}
+                                    </span>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!--<div class="all_hours_container">-->
                 <!--<div class="row">-->
                 <!--    <div class="col-sm-12">-->
                 <!--        <h3 class="hours_heading text-left" >{{$t("hours_page.reg_hours")}}</h3>-->
@@ -51,8 +107,8 @@
                         
                 <!--    </div>-->
                 <!--</div>-->
-                <div class="padding_top_40"></div>
-            </div>
+                <!--<div class="padding_top_40"></div>-->
+            <!--</div>-->
         </div >
     </div>
 </template>
