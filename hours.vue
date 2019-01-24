@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4 col-lg-3">
-                    <div class="hours_container" v-for="hour in hours">
+                    <div class="hours_container" v-for="hour in hours" :key="hour.id"> 
                         <p class="caps center">Monday - Friday</p>
                         <p v-for="hour in weekdayHours" class="center">
                             {{hour.open_time | moment("h:mm a", timezone)}} - {{hour.close_time | moment("h:mm a", timezone)}}    
