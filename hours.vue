@@ -11,7 +11,7 @@
         <div class="site_container">
             <div class="row hours_row">
                 <div class="col-sm-12 col-lg-3">
-                    <div class="hours_container ">
+                    <div class="hours_container" :class="{'todays_hours' : }">
                         <p v-if="todaysHours && !todaysHours.is_closed" class="caps center">Open Now</p>
                         <p v-if="todaysHours && !todaysHours.is_closed" class="center">
                             {{todaysHours.open_time | moment("h:mm a", timezone)}} - {{todaysHours.close_time | moment("h:mm a", timezone)}}    
@@ -169,6 +169,12 @@
                 closeHolidays () {
                     var holidayHours = this.holidayHours;
                     return _.sortBy(_.filter(holidayHours, function(o) { return o.is_closed; }), [function(o) { return o.holiday_date; }]);
+                },
+                isToday(){
+                    if(){
+                        return true
+                    }
+                    return false;
                 }
             },
             methods : {
