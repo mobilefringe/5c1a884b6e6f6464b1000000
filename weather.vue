@@ -12,8 +12,12 @@
         Vue.use(Lightbox);
         return Vue.component("weather-component", {
             template: template, // the variable template will be injected,
+            data(){
+                return {
+                    weatherDets: null,
+                }
+            }
             computed: {
-                
                 weather() {
                     var openWeatherAPIKey = "c225dc6aeb2d6a1b39e8a463cedb62bd";
                     var openWeatherURL = "https://api.openweathermap.org/data/2.5/weather"+ "?id=6167865&APPID=" + openWeatherAPIKey + "&units=metric";
