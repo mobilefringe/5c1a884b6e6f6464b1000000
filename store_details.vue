@@ -238,7 +238,6 @@
                     this.map = map;
                      this.dropPin(this.currentStore);
                 },
-                
                 checkImageURL(value) {
                   if (_.includes(value.image_url, "missing")) {
                     if (value.store === null || value.store === undefined) {
