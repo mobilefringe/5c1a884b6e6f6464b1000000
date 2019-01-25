@@ -155,7 +155,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://bramaleacitycentre.com/promotions/" + slug;
+                    var share_url = "http://www.centerpointshops.com/promotions/" + slug;
                     return share_url;
                 },
                 loadMoreItems() {
