@@ -34,15 +34,6 @@
         "id": "hours_link"
     },
     {
-        "name": "header.services",
-        "href": "#",
-        "open_dropdown": false,
-        "id": "services_link",
-        "sub_menu": [
-            
-        ]
-    },
-    {
         "name": "header.contact_us",
         "href": "#",
         "id": "contact_link",
