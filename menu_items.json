@@ -38,14 +38,7 @@
         "href": "#",
         "open_dropdown": false,
         "id": "services_link",
-        "sub_menu": [{
-                "name": "header.sustainability ",
-                "href": "/pages/centerpoint-sustainability"
-            },
-            {
-                "name": "header.accessibility",
-                "href": "/pages/centerpoint-accessibility"
-            }
+        "sub_menu": [
             
         ]
     },
@@ -66,6 +59,14 @@
             {
                 "name": "header.employment",
                 "href": "/jobs"
+            },
+            {
+                "name": "header.sustainability ",
+                "href": "/pages/centerpoint-sustainability"
+            },
+            {
+                "name": "header.accessibility",
+                "href": "/pages/centerpoint-accessibility"
             }
         ]
     }
