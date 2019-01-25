@@ -214,7 +214,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://bramaleacitycentre.com/events/" + slug;
+                    var share_url = "http://www.centerpointshops.com/events/" + slug;
                     return share_url;
                 },
                 loadMoreItems() {
