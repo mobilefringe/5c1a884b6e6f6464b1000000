@@ -19,7 +19,7 @@
     }
 </style>
 <script>
-    define(["Vue"], function(Vue) {
+    define(["Vue", "vuex"], function(Vue,Vuex) {
         return Vue.component("thank-you-component", {
             template: template, // the variable template will be injected
             computed: {
@@ -44,6 +44,7 @@
                     return pageBanner;
                 }
             },
+            
         });
     });
 </script>
