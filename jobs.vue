@@ -66,7 +66,6 @@
 			<div class="show_more"  v-if="promotions.length > 0">
               <div
                 class="pointer"
-                v-if="promos && showMore <= promos.length"
                 @click="loadMoreItems()"
               >{{$t("promos_page.more_promos")}}</div>
             </div>
