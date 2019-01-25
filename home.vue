@@ -4,7 +4,7 @@
 			<div class="home-banner-container">
 				<slick ref="slick" :options="slickOptions">
 					<div class="" v-for="banner in banners" v-if="banners">
-					    <a :href="banner.url">
+					    <a v-if="banner.url" :href="banner.url">
 						    <div class="home-banner" v-lazy:background-image="banner.image_url"></div>
 						</a>
 					</div>
