@@ -238,6 +238,24 @@
                     this.map = map;
                      this.dropPin(this.currentStore);
                 },
+                
+                checkImageURL(value) {
+                  if (_.includes(value.image_url, "missing")) {
+                    if (value.store === null || value.store === undefined) {
+                      return "//codecloud.cdn.speedyrails.net/sites/5c17f84d6e6f643522450000/image/png/1545071987721/logo.png";
+                    } else if (
+                      value.store != null &&
+                      value.store != undefined &&
+                      _.includes(value.store.store_front_url_abs, "missing")
+                    ) {
+                      return "//codecloud.cdn.speedyrails.net/sites/5c17f84d6e6f643522450000/image/png/1545071987721/logo.png";
+                    } else {
+                      return value.store.store_front_url_abs;
+                    }
+                  } else {
+                    return value.promo_image_url_abs;
+                  }
+                }
             }
         });
     });
