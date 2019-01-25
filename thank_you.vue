@@ -22,11 +22,28 @@
     define(["Vue"], function(Vue) {
         return Vue.component("thank-you-component", {
             template: template, // the variable template will be injected
-            data: function() {
-                return {
-                    title: "title"
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'findRepoByName'
+                ]),
+                pageBanner(){
+                    var temp_repo = null;
+                    var pageBanner = null;
+                    //Add custom banners for indivial pages 
+                    temp_repo = this.findRepoByName('Pages Banner');
+                    
+                    if(temp_repo && temp_repo.images) {
+                        pageBanner = temp_repo.images[0];
+                    }
+                    else {
+                        pageBanner = {};
+                        pageBanner.image_url = "";
+                    }
+                    return pageBanner;
                 }
-            }
+            },
         });
     });
 </script>
