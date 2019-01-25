@@ -7,6 +7,7 @@
 					    <a v-if="banner.url" :href="banner.url">
 						    <div class="home-banner" v-lazy:background-image="banner.image_url"></div>
 						</a>
+						<div v-else class="home-banner" v-lazy:background-image="banner.image_url"></div>
 					</div>
 				</slick>
 			</div>
