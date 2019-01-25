@@ -65,10 +65,9 @@
 					<!--<paginate-links for="currentSelection" :async="true" :simple="{ next: 'Next »', prev: '« Back' }"></paginate-links>-->
 			<!--	</div>-->
 			<!--</div>-->
-			<div class="show_more"  v-if="events.length > 0">
+			<div class="show_more"  v-if="promos && showMore <= promos.length">
               <div
                 class="pointer"
-                v-if="promos && showMore <= promos.length"
                 @click="loadMoreItems()"
               >{{$t("events_page.more_promos")}}</div>
             </div>
