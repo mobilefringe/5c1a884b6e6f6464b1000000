@@ -8,7 +8,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="site_container">
+		<div class="map_container site_container clearfix">
 			<div class="col-sm-4">
                 <div class="map_directory text-center hidden_phone">
                     <h2 style="display:none;" class="map_title caps">{{$t("stores_page.find_store")}}</h2>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-sm-8">
-                <div class="padding_top_20 map light_border">
+                <div class="map light_border">
     				<mapplic-map ref="mapplic_ref" :height="650" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="mapStores" :floorlist="floorList" tooltiplabel="View Store Details"></mapplic-map>
     			</div>
             </div>
