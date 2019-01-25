@@ -8,7 +8,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="site_container">
+		<div class="site_container" v-if="currentStore">
 			<div class="row">
 				<div class="col-sm-4 promo_logo_container hidden_phone">
 					<div class="image_container details_store_image">
