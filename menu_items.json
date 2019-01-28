@@ -52,6 +52,10 @@
                 "href": "/jobs"
             },
             {
+                "name": "header.gift_cards ",
+                "href": "/pages/centerpoint-gift-cards"
+            },
+            {
                 "name": "header.sustainability ",
                 "href": "/pages/centerpoint-sustainability"
             },
