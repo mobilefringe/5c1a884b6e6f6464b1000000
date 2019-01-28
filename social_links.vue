@@ -2,7 +2,7 @@
     <div>
         <a href="https://www.facebook.com/CenterpointMall" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><p style="display:none">Facebook</p></a>
         <a href="https://twitter.com/Centerpoint_TO" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><p style="display:none">Twitter</p></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><p style="display:none">Instagram</p></a>
+        <a href="https://www.instagram.com/centerpoint_to/  " target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><p style="display:none">Instagram</p></a>
          
     </div>
     
