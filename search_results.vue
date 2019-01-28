@@ -53,7 +53,7 @@
                     </div>
         		</div>
                 <div class="page_container text-left col-md-12" v-else> 
-                    <h4>Sorry, there are no results that match your query. Please try again.</h4>
+                    <h4>Sorry, there are no results that match your search. Please try again.</h4>
                 </div>
             </div>
         </div>
