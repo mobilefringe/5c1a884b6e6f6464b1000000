@@ -36,7 +36,7 @@
     {
         "name": "header.about_us",
         "href": "",
-        "id": "contact_link",
+        "id": "about_us_link",
         "open_dropdown": false,
         "sub_menu": [
             {
