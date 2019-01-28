@@ -132,15 +132,12 @@
                       
                         if( _.includes([4,5], key) ) {
                             value.masonry_class = "grid-item--height2 grid-item--width2";
-                            // value.image_url = "https://picsum.photos/570/1140?image=98"+key;
                         }
                         // else if ( _.includes([2,5], key) ){
                         //     value.masonry_class = "grid-item--width2";
-                        //     value.image_url = "https://picsum.photos/1140/570?image=97"+key;
                         // }
                         else {
                             value.masonry_class = " ";
-                            // value.image_url = "https://picsum.photos/570/570?image=88"+key;
                         }
                         if(value.name === null || value.name === undefined || value.name.length == 0) {
                             value.no_hover_class = false;
