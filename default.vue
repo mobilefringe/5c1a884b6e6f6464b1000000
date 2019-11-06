@@ -32,15 +32,15 @@
           return this.$store.getters.findMetaDataByPath;
         }
       },
-    //   metaInfo () {
-    //     return {
-    //       title: this.meta.meta_title,
-    //       meta: [
-    //         {name: 'description', content: this.meta.meta_description},
-    //         {name: 'keywords', content: this.meta.meta_keywords}
-    //       ]
-    //     }
-    //   }
+      metaInfo () {
+        return {
+          title: this.meta.meta_title,
+          meta: [
+            {name: 'description', content: this.meta.meta_description},
+            {name: 'keywords', content: this.meta.meta_keywords}
+          ]
+        }
+      }
     });
   });
 </script>
