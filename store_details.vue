@@ -174,13 +174,6 @@
                     'findRepoByName',
                     'findHourById'
                 ]),
-                // getPNGurl () {
-                //     return "https://www.mallmaverick.com" + this.property.map_url;
-                // },
-                // pngMapRef() {
-                //     return this.$refs.pngmapref;
-                // },
-                
                 mapStores() {
                     var all_stores = this.processedStores;
                     _.forEach(all_stores, function(value, key) {
@@ -195,7 +188,7 @@
                     return _.map(this.processedStores, 'name');
                 },
                 getSVGMap(){
-                  return "//mallmaverick.com"+this.property.svgmap_url;  
+                  return "//assets.mallmaverick.com" + this.property.svgmap_url;  
                 },
                 floorList () {
                     var floor_list = [];
@@ -213,8 +206,11 @@
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "jobs"),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData","promotions"), 
+                            this.$store.dispatch("getData", "jobs"),
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
@@ -233,21 +229,17 @@
                      this.dropPin(this.currentStore);
                 },
                 checkImageURL(value) {
-                  if (_.includes(value.image_url, "missing")) {
-                    if (value.store === null || value.store === undefined) {
-                      return "//codecloud.cdn.speedyrails.net/sites/5c17f84d6e6f643522450000/image/png/1545071987721/logo.png";
-                    } else if (
-                      value.store != null &&
-                      value.store != undefined &&
-                      _.includes(value.store.store_front_url_abs, "missing")
-                    ) {
-                      return "//codecloud.cdn.speedyrails.net/sites/5c17f84d6e6f643522450000/image/png/1545071987721/logo.png";
+                    if (_.includes(value.image_url, "missing")) {
+                        if (value.store === null || value.store === undefined) {
+                            return "//codecloud.cdn.speedyrails.net/sites/5c17f84d6e6f643522450000/image/png/1545071987721/logo.png";
+                        } else if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, "missing")) {
+                            return "//codecloud.cdn.speedyrails.net/sites/5c17f84d6e6f643522450000/image/png/1545071987721/logo.png";
+                        } else {
+                            return value.store.store_front_url_abs;
+                        }
                     } else {
-                      return value.store.store_front_url_abs;
+                        return value.promo_image_url_abs;
                     }
-                  } else {
-                    return value.promo_image_url_abs;
-                  }
                 }
             }
         });
