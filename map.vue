@@ -123,7 +123,7 @@
                     return _.map(this.processedStores, 'name');
                 },
                 getSVGMap(){
-                  return "//mallmaverick.com"+this.property.svgmap_url;  
+                  return "//assets.mallmaverick.com" + this.property.svgmap_url;  
                 },
                 floorList () {
                     var floor_list = [];
