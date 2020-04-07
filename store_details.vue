@@ -1,7 +1,6 @@
 <template>
 	<div class="page_container store_dets_container" v-if="dataLoaded" id="store_dets_container">
 		<div class="page_header" v-if="pageBanner" v-lazy:background-image="pageBanner.image_url">
-			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{$t("stores_page.shopping")}}</h1>
@@ -12,7 +11,6 @@
 			<div class="row">
 				<div class="col-sm-4 promo_logo_container hidden_phone">
 					<div class="image_container details_store_image">
-						<!--<img v-lazy="currentStore.store_front_url_abs" class="image"/>-->
 						<div v-if="currentStore.no_store_logo" class="store_details_image center-block">
                             <div class="no_logo">
                                 <img class="store_img" src="//assets.mallmaverick.com/system/site_images/photos/000/041/782/original/transparent_logo.png?1533845225" alt="">
@@ -24,7 +22,6 @@
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
 					<div class="col-sm-12 no_padding">
-						<!--<png-map ref="pngmapref" v-bind:png-map-url="getPNGurl" :initial-position="'1250 1250'" :height="_.toNumber('625')" @updateMap="updatePNGMap"></png-map>-->
 						<mapplic-map ref="mapplic_ref" :height="358" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="mapStores" :floorlist="floorList" tooltiplabel="View Store Details" @updateMap="updateSVGMap"></mapplic-map>
 					</div>
 				</div>
@@ -35,8 +32,8 @@
 					<div class="text-center">
 					    <h3 class="event_store_name caps" v-if="locale=='en-ca'">{{currentStore.name}}</h3>
 						<h3 class="event_store_name caps" v-else>{{currentStore.name_2}}</h3>
-						<h4 v-if="currentStore.phone" class="store_dets_title"> <a :href="'tel:'+currentStore.phone">{{currentStore.phone}}</a></h4>
-						<h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
+						<h4 v-if="currentStore.phone" class="store_dets_title"> <a :href="'tel:' + currentStore.phone">{{currentStore.phone}}</a></h4>
+						<h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//' + currentStore.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
 						<h4 v-if="storeHours.length > 0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>
 						<ul class="store_hours_list">
 							<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
@@ -71,7 +68,6 @@
         									<router-link :to="'/promotions/'+promo.slug" class="" >{{$t("promos_page.read_more")}}</router-link>
         								</span>
     								</div>
-    								
 								</div>
 							</div>
 						</div>
@@ -110,10 +106,9 @@
                     this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
                     var temp_repo = this.findRepoByName('Stores Banner');
-                    if(temp_repo && temp_repo.images) {
+                    if (temp_repo && temp_repo.images) {
                         this.pageBanner = temp_repo.images[0];
-                    }
-                    else {
+                    } else {
                         this.pageBanner = {};
                         this.pageBanner.image_url = "";
                     }
@@ -126,25 +121,22 @@
                     } else {
                       this.currentStore.no_store_logo = false;
                     }
+                    
                     var vm = this;
                     var temp_promo = [];
                     var temp_job = [];
                     _.forEach(this.currentStore.promotions, function(value, key) {
                         var current_promo = vm.findPromoById(value);
-                        current_promo.description_short = _.truncate(current_promo.description, {
-                            'length': 70
-                        });
+                        current_promo.description_short = _.truncate(current_promo.description, { 'length': 70 });
                         temp_promo.push(current_promo);
                     });
+                    this.promotions = temp_promo;
+                    
                     _.forEach(this.currentStore.jobs, function(value, key) {
                         var current_job = vm.findJobById(value);
-                        current_job.description_short = _.truncate(current_job.description, {
-                            'length': 70
-                        });
+                        current_job.description_short = _.truncate(current_job.description, { 'length': 70 });
                         temp_job.push(current_job);
-
                     })
-                    this.promotions = temp_promo;
                     this.jobs = temp_job;
                     
                     var storeHours = [];
@@ -153,8 +145,7 @@
                         var hour = vm.findHourById(value);
                         if(hour.day_of_week === 0){
                             hour.order = 7;
-                        }
-                        else {
+                        } else {
                             hour.order = hour.day_of_week;
                         }
                         storeHours.push(hour);
@@ -162,7 +153,6 @@
                     this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
                 }
             },
-            
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -188,7 +178,7 @@
                     return _.map(this.processedStores, 'name');
                 },
                 getSVGMap(){
-                  return "//assets.mallmaverick.com" + this.property.svgmap_url;  
+                    return "//assets.mallmaverick.com" + this.property.svgmap_url;  
                 },
                 floorList () {
                     var floor_list = [];
