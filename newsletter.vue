@@ -25,7 +25,7 @@
                                         <label>Email </label>
                                         <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-gmkjr-gmkjr" required="" type="email">
                                     </div>
-                    			
+                    			</div>
                     				<div>
                     					<div><input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox"><label for="cm-privacy-consent">I agree to be emailed</label></div>
                     					<input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
