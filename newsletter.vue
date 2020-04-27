@@ -33,7 +33,7 @@
                     				
                     			</div>
                     		</div>
-                    		<button type="submit">Subscribe</button>
+                    		<button class="contest_btn" type="submit">Subscribe</button>
                     	</form>
                     </div>
                     <!--<form  class="form-horizontal js-cm-form" action="https://mobilefringe.createsend.com/t/d/s/gmkjr/" method="post">
