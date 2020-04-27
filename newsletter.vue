@@ -16,7 +16,7 @@
                     		<div>
                     			<div class="form-group row">
                                     <div class="col-sm-6 col-xs-12">
-                                        <label class="label">Name </label>
+                                        <label class="label" for="cm-name">Name </label>
                                         <input class="form-control" aria-label="Name" id="fieldName" maxlength="200" name="cm-name" required>
                                     </div>
                                
