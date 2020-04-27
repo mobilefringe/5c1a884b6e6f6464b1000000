@@ -21,7 +21,7 @@
                                     </div>
                                
                                     <div class="col-sm-6 col-xs-12">
-                                        <label>Email </label>
+                                        <label class="label" for="cm-gmkjr-gmkjr">Email </label>
                                         <input  autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-gmkjr-gmkjr" required="" type="email">
                                     </div>
                     			</div>
