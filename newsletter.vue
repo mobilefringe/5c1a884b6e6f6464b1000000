@@ -22,7 +22,7 @@
                                
                                     <div class="col-sm-6 col-xs-12">
                                         <label>Email </label>
-                                        <input class="form-control" autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-gmkjr-gmkjr" required="" type="email">
+                                        <input  autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-gmkjr-gmkjr" required="" type="email">
                                     </div>
                     			</div>
                     		    <div class="form-group">
