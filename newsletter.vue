@@ -11,7 +11,6 @@
             <div class="row"> 
                 <div class="col-md-12 contact_contents">
                     <div>
-                    	<h1 color="#000"></h1>
                     	<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AE4C670BECAAAA4FA32906FB681567644C4A43E740167166D6AD6756667F5A8CB154B7E789BE69A4053A6EE059BF9AD9D">
                     		<div>
                     			<div class="form-group row">
